@@ -1,17 +1,17 @@
 namespace ConsoleApp.Models
 {
-    public class Employee
+    public class Student
     {
        public string MaSV { get; set; }
        public string TenSV { get; set; } 
        public int NamSinh { get; set; }
        public void EnterData()
        {
-        System.Console.Write("Ma nhan vien = ");
+        System.Console.Write("Ma SV = ");
         MaSV = Console.ReadLine();
-        System.Console.Write("Ten nhan vien = ");
+        System.Console.Write("Ten SV = ");
         TenSV = Console.ReadLine();
-        System.Console.Write("Tuoi = ");
+        System.Console.Write("Nam Sinh = ");
         NamSinh = Convert.ToInt16(Console.ReadLine());
         
        }
