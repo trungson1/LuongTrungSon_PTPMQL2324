@@ -18,6 +18,12 @@ namespace ConsoleApp.Models
         Address = Console.ReadLine();
         System.Console.Write("Age = ");
         Age = Convert.ToInt16(Console.ReadLine());
+        try{
+            Age = Convert.ToInt16(Console.ReadLine());
+        }catch(Exception e)
+        {
+            Age = 0;
+        }
        }
        public void Display()
        {
@@ -25,5 +31,6 @@ namespace ConsoleApp.Models
         System.Console.WriteLine("Dia Chi: {0} ",Address);
         System.Console.WriteLine("Tuoi: {0} ",Age);
        }
+       
     }
 }
