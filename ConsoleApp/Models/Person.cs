@@ -21,7 +21,9 @@ namespace ConsoleApp.Models
        }
        public void Display()
        {
-        System.Console.WriteLine("{0} - {1} - {2} tuoi",FullName, Address, Age);
+        System.Console.WriteLine("Ho Ten: {0} ",FullName);
+        System.Console.WriteLine("Dia Chi: {0} ",Address);
+        System.Console.WriteLine("Tuoi: {0} ",Age);
        }
     }
 }
