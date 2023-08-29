@@ -3,10 +3,9 @@ public class Program
 {
     private static void Main(string[] args)
     {
-        Student std = new Student();
-        std.EnterData();
-        std.StudentCode = "1234567";
-        std.Display();    
+         GiaiPT gpt = new GiaiPT();
+        gpt.GPTBac1();
+        gpt.GPTBac2();   
     }
 }
 
