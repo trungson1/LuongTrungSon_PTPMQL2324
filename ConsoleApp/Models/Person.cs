@@ -18,9 +18,9 @@ namespace ConsoleApp.Models
         Address = Console.ReadLine();
         System.Console.Write("Age = ");
         Age = Convert.ToInt16(Console.ReadLine());
-        try{
+        try {
             Age = Convert.ToInt16(Console.ReadLine());
-        }catch(Exception e)
+        } catch(Exception e)
         {
             Age = 0;
         }
