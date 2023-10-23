@@ -1,0 +1,16 @@
+@model DemoMVC.Models.Person
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h1>Nhập dữ liệu từ Excel</h1>
+
+<hr>
+<form asp-action="Upload" enctype="multipart/form-data">
+    <div class="row form-control">
+        <label class="col-sm-2">Nhập từ Excel:</label>
+        <input type="file" name="file" class="col-sm-4">
+        <input type="submit" value="Upload" class="btn btn-primary col-sm-1">
+    </div>
+</form>

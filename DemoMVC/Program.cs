@@ -2,8 +2,10 @@ using DemoMVC.Data;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 //set connect to database
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConection") 
+    ?? throw new InvalidOperationException("Connection string 'DefaultConection' not found.")));
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

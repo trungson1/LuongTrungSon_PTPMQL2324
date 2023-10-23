@@ -16,6 +16,68 @@ namespace DemoMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
 
+            modelBuilder.Entity("DemoMVC.Models.Employee", b =>
+                {
+                    b.Property<string>("EmployeeID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("DemoMVC.Models.Hethongphanphoi", b =>
+                {
+                    b.Property<string>("Madaily")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Diachi")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Dienthoai")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MaHTPP")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nguoidaidien")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Tendaily")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Madaily");
+
+                    b.ToTable("HTPP");
+                });
+
+            modelBuilder.Entity("DemoMVC.Models.Person", b =>
+                {
+                    b.Property<string>("PersonID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fullname")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PersonID");
+
+                    b.ToTable("Persons");
+                });
+
             modelBuilder.Entity("DemoMVC.Models.Student", b =>
                 {
                     b.Property<string>("StudentID")

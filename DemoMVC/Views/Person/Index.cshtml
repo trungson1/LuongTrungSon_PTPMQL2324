@@ -1,9 +1,47 @@
-<h1>Xin chao</h1>
-<form asp-action="Index">
-   <label>Nhap ho va ten</label>
-   <input type="text" name ="fname"/>
-   <input type= "submit" value="submit">
+@model IEnumerable<DemoMVC.Models.Person>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@{
+   ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<p>
+   <a asp-action="Create">Create New</a>
+   <a class="btn btn-sucess" asp-action="Download">Download</a>
+</p>
+<table class="table">
+   <thead>
+      <tr>
+         <th>
+            @Html.DisplayNameFor(model => model.PersonID)
+         </th>
+         <th>
+            @Html.DisplayNameFor(model => model.Fullname)
+         </th>
+         <th>
+            @Html.DisplayNameFor(model => model.Address)
+         </th>
+         <th></th>
+      </tr>
+   </thead>
+   <tbody>
+@foreach (var item in Model) {
+      <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.PersonID)
+         </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Fullname)
+         </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Address)
+         </td>
+         <td>
+            <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a>
+            <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
+         </td>
+      </tr>
+}
+   </tbody>
+</table>
 
-</form>
-
-<h2>@ViewBag.mess</h2>
